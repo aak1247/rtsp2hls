@@ -12,4 +12,4 @@
 
 ## Example
 
-> 请求rtsp流地址为：rtsp://1@2:xxx.bbb，rtsp-stream服务部署地址为：http://localhost:3001，则请求``http://localhost:3001/rtsp://1@2:xxx.bbb``即可得到hls流
+> 请求rtsp流地址为：``rtsp://1@2:xxx.bbb``，``rtsp-stream``服务部署地址为：``http://localhost:3001``，则请求``http://localhost:3001/rtsp://1@2:xxx.bbb``即可得到hls流
