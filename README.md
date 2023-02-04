@@ -1,11 +1,21 @@
 # RTSP Stream
 
-## 部署
+| English | [简体中文](./README.zh-CN.md) |
 
-1. docker内已包含ffmpeg包，可以独立部署，临时文件默认目录为/app/dist/rtsp_temp (可以不挂载出来)
-2. 默认端口为3001，可以在部署时修改为其他端口，在前端服务的代理中配置一致即可
+## Deploy
 
-## 工作流程
+```bash
+docker run -d -p 3001:3001 --name rtsp2hsl aak1247/rtsp2hsl
+```
 
-1. 转流转码服务处理url，拼接完整rtsp地址，调用ffmpeg子进程完成转流转码，并建立临时文件夹保存当前流的临时文件
-2. 定时处理当前转流中的流，超时（默认5min）后关闭子进程并删除临时文件
+1. docker image already contains ffmpeg package, can be deployed independently, the default temporary file directory is /app/dist/rtsp_temp.
+2. default port is 3001
+
+## Workflow
+
+1. The rtsp2hls service handles the url, concatenates the complete rtsp address, calls the ffmpeg sub-process to complete the rtsp to hls conversion, and creates a temporary folder to save the temporary files of the current stream.
+2. Periodically process the current stream, close the sub-process and delete the temporary file after timeout (default 5min)
+
+## Example
+
+> If Request rtsp stream address: ``rtsp://1@2:xxx.bbb``, ``rtsp-stream`` service deployment address: ``http://localhost:3001``, then request ``http://localhost:3001/rtsp://1@2:xxx.bbb`` to get hls stream
