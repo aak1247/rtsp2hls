@@ -1,4 +1,4 @@
-# RTSP Stream
+# RTSP2HLS
 
 | [English](./README.md) | 简体中文 |
 
