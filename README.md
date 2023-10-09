@@ -18,4 +18,4 @@ docker run -d -p 3001:3001 --name rtsp2hsl aak1247/rtsp2hsl
 
 ## Example
 
-> If Request rtsp stream address: ``rtsp://1@2:xxx.bbb``, ``rtsp-stream`` service deployment address: ``http://localhost:3001``, then request ``http://localhost:3001/rtsp://1@2:xxx.bbb`` to get hls stream
+> If Request rtsp stream address: ``rtsp://1@2:xxx.bbb``, ``rtsp-stream`` service deployment address: ``http://localhost:3001``, then request ``http://localhost:3001/1@2:xxx.bbb`` to get hls stream

@@ -18,4 +18,4 @@ docker run -d -p 3001:3001 --name rtsp2hsl aak1247/rtsp2hsl
 
 ## Example
 
-> 请求rtsp流地址为：``rtsp://1@2:xxx.bbb``，``rtsp2hls``服务部署地址为：``http://localhost:3001``，则请求``http://localhost:3001/rtsp://1@2:xxx.bbb``即可得到hls流
+> 请求rtsp流地址为：``rtsp://1@2:xxx.bbb``，``rtsp2hls``服务部署地址为：``http://localhost:3001``，则请求``http://localhost:3001/1@2:xxx.bbb``即可得到hls流
