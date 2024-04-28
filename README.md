@@ -5,7 +5,7 @@
 ## Deploy
 
 ```bash
-docker run -d -p 3001:3001 --name rtsp2hsl aak1247/rtsp2hsl
+docker run -d -p 3001:3001 --name rtsp2hls aak1247/rtsp2hls
 ```
 
 1. docker image already contains ffmpeg package, can be deployed independently, the default temporary file directory is /app/dist/rtsp_temp.
