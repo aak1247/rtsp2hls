@@ -5,7 +5,7 @@
 ## 部署
 
 ```bash
-docker run -d -p 3001:3001 --name rtsp2hsl aak1247/rtsp2hsl
+docker run -d -p 3001:3001 --name rtsp2hls aak1247/rtsp2hls
 ```
 
 1. docker内已包含ffmpeg包，可以独立部署，临时文件默认目录为/app/dist/rtsp_temp (可以不挂载出来)
